@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './css/index.css';
-import App from './App';
+import './sass/main.sass';
+import Tarot from './Tarot';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Tarot />, document.getElementById('root'));
