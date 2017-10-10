@@ -1,0 +1,23 @@
+@import "_vars"
+@import "_placeholders"
+
+.header
+  text-align: center
+  padding: $spacing-large 0
+  &__title
+    margin: 0 $spacing-large
+  &__title,
+  &:before,
+  &:after
+    display: inline-block
+    vertical-align: middle
+  &:before,
+  &:after
+    content: ''
+    width: 130px
+    height: 20px
+    border-radius: $border-radius-big
+  &:before
+    background-color: $tertiary-color
+  &:after
+    background-color: $secondary-color

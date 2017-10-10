@@ -1,52 +1,6 @@
 @import "_vars"
 @import "_placeholders"
 
-.tarot
-  @extend %clearfix
-  max-width: 1400px
-  margin:
-    left: auto
-    right: auto
-  padding:
-    left: $spacing-base
-    right: $spacing-base
-
-.header
-  text-align: center
-  padding: $spacing-large 0
-  &__title
-    margin: 0 $spacing-large
-  &__title,
-  &:before,
-  &:after
-    display: inline-block
-    vertical-align: middle
-  &:before,
-  &:after
-    content: ''
-    width: 130px
-    height: 20px
-    border-radius: $border-radius-big
-  &:before
-    background-color: $tertiary-color
-  &:after
-    background-color: $secondary-color
-
-.start-button
-  width: 180px
-  line-height: 40px
-  border-radius: $border-radius-big
-  margin: 0 auto
-  display: block
-  background-color: #8c86ed
-  font-family: $font-family-base
-  text-align: center
-  border: none
-  font-size: 20px
-  font-weight: 300
-  cursor: pointer
-  color: #fff
-
 .card-list
   @extend %clearfix
   display: flex
