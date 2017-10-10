@@ -1,24 +1,98 @@
-.app
+@import "_vars"
+@import "_placeholders"
+
+.tarot
+  @extend %clearfix
+  max-width: 1400px
+  margin:
+    left: auto
+    right: auto
+  padding:
+    left: $spacing-base
+    right: $spacing-base
+
+.header
   text-align: center
+  padding: $spacing-large 0
+  &__title
+    margin: 0 $spacing-large
+  &__title,
+  &:before,
+  &:after
+    display: inline-block
+    vertical-align: middle
+  &:before,
+  &:after
+    content: ''
+    width: 130px
+    height: 20px
+    border-radius: $border-radius-big
+  &:before
+    background-color: $tertiary-color
+  &:after
+    background-color: $secondary-color
 
-.app-logo
-  animation: App-logo-spin infinite 20s linear
-  height: 80px
+.start-button
+  width: 180px
+  line-height: 40px
+  border-radius: $border-radius-big
+  margin: 0 auto
+  display: block
+  background-color: #8c86ed
+  font-family: $font-family-base
+  text-align: center
+  border: none
+  font-size: 20px
+  font-weight: 300
+  cursor: pointer
+  color: #fff
 
-.app-header
-  background-color: #222
-  height: 150px
-  padding: 20px
-  color: white
+.card-list
+  @extend %clearfix
+  display: flex
+  flex: 0 1 auto
+  flex-direction: row
+  flex-wrap: wrap
+  position: relative
+  margin:
+    left: -($spacing-small)
+    right: -($spacing-small)
+  padding:
+    top: $spacing-large
+    bottom: $spacing-large
 
-.app-title
-  font-size: 1.5em
+  &__column
+    animation: card-item-animation .2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    flex: 0 0 auto
+    flex-grow: 1
+    flex-basis: 0
+    max-width: 100%
+    margin-bottom: $spacing-large
+    padding:
+      left: $spacing-small
+      right: $spacing-small
 
-.app-intro
-  font-size: large
+  &__item
+    padding: $spacing-base
+    background-color: #fff
+    border-radius: $border-radius-base
+    box-shadow: 0 22px 43px 0 $shadow-color
+    transition: .2s box-shadow ease, .2s transform ease
+    left: 0
+    top: 0
+    text-align: center
+    @extend %clearfix
+    &:hover
+      box-shadow: 0 42px 43px 0 $shadow-color-hover
+      transform: translateY(-10px) scale(1.05) translateZ(0)
+    img
+      max-width: 110px
+      display: inline-block
 
-@keyframes App-logo-spin
+@keyframes card-item-animation
   from
-    transform: rotate(0deg)
+    opacity: 0
+    transform: translateY(-20px)
   to
-    transform: rotate(360deg)
+    opacity: 1
+    transform: translateY(0)
